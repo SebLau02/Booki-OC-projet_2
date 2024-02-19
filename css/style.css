@@ -1,12 +1,12 @@
 /****** General ***********/
 * {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
 :root {
-    --main-color: #0065FC;
-    --main-bg-color: #F2F2F2;
-    --filter-bg-color: #DEEBFF;
+    --main-color: #0065fc;
+    --main-bg-color: #f2f2f2;
+    --filter-bg-color: #deebff;
 }
 
 .fa-solid {
@@ -55,10 +55,53 @@ a {
 }
 
 .neutral-star {
-    color: var(--main-bg-color)
+    color: var(--main-bg-color);
+}
+
+/* --------------------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+header > a > img {
+    max-width: 61.09px;
+    width: 100%;
+
+    color: var(--main-color);
+
+    padding: 30px 50px;
+}
+header > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 68px;
+
+    align-self: start;
+
+    color: #000000;
+}
+header > div > :first-child {
+    position: relative;
+
+    color: var(--main-color);
+    padding-top: 16px;
+}
+header > div > :first-child::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    height: 2px;
+    width: 100%;
+    content: "";
+    background-color: var(--main-color);
 }
 
 /****** Hebergements And Populaires ***********/
+
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
@@ -120,9 +163,6 @@ a {
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
-
-
-
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
