@@ -166,8 +166,9 @@ main {
     border: none;
     border-top: 1px solid var(--main-bg-color);
     border-bottom: 1px solid var(--main-bg-color);
-}
-.info-group__search-bar > input::placeholder {
+
+    /* style pour input value */
+
     font-weight: 700;
     font-size: 18px;
     color: var(--dark-black-color);
@@ -201,6 +202,7 @@ main {
 .filter-bar {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 15px;
 }
 .filter-bar > * {
@@ -426,9 +428,9 @@ que la propriété background.
 
 .activities-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
     align-items: center;
+    justify-content: center;
+    gap: 30px;
 }
 .activities-container > a {
     width: 100%;
@@ -437,14 +439,60 @@ que la propriété background.
     max-height: 439px;
 
     box-shadow: 0px 3px 15px 0px #0000001a;
-}
-.activities-container__activity > img {
-    max-width: 297px;
-    max-height: 380px;
 
+    border-radius: 20px;
+}
+.activities-container__activity > div {
+    position: relative;
+
+    height: 26vw;
+    max-height: 380px;
+    width: 100%;
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    overflow: hidden;
+}
+.activities-container__activity > div > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
+.activities-container__activity > h4 {
+    padding: 20px 19px;
+    margin: 0;
+}
 
+/* --------------------------------- */
+
+.footer {
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--main-bg-color);
+
+    margin-top: 35px;
+}
+.footer > div {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 15px;
+
+    flex: 1;
+
+    padding: 20px;
+}
+
+.footer > div > h3 {
+    margin: 0;
+}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
