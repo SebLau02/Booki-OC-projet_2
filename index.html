@@ -22,7 +22,7 @@
 
     <body>
         <div class="main-container">
-            <!--             <header class="header">
+            <header class="header">
                 <a href="#" aria-label="Retour à la page d'accueil"
                     ><img src="./images/logo/Booki.png" alt="logo booki"
                 /></a>
@@ -31,7 +31,7 @@
                     ><a href="#activités">Activités</a>
                 </nav>
             </header>
- -->
+
             <main>
                 <div class="info-group">
                     <div>
@@ -50,24 +50,32 @@
                             value="Marseille, France"
                         />
 
-                        <button>Rechercher</button>
+                        <button>
+                            <span>Rechercher</span
+                            ><span
+                                ><i class="fa-solid fa-magnifying-glass"></i
+                            ></span>
+                        </button>
                     </form>
 
                     <div class="filter-bar">
                         <span>Filtres</span>
-                        <button>
-                            <i class="fa-solid fa-money-bill-wave"></i>
-                            Economique
-                        </button>
-                        <button>
-                            <i class="fa-solid fa-person"></i> Familial
-                        </button>
-                        <button>
-                            <i class="fa-solid fa-heart"></i> Romantique
-                        </button>
-                        <button>
-                            <i class="fa-solid fa-fire"></i> Nos pépites
-                        </button>
+
+                        <div class="filter__grid">
+                            <button>
+                                <i class="fa-solid fa-money-bill-wave"></i>
+                                Economique
+                            </button>
+                            <button>
+                                <i class="fa-solid fa-person"></i> Familial
+                            </button>
+                            <button>
+                                <i class="fa-solid fa-heart"></i> Romantique
+                            </button>
+                            <button>
+                                <i class="fa-solid fa-fire"></i> Nos pépites
+                            </button>
+                        </div>
                     </div>
                     <div class="info">
                         <span><i class="fa-solid fa-info"></i></span> Plus de
@@ -84,7 +92,7 @@
                                 <article>
                                     <img
                                         src="./images/hebergements/fred-kleber.jpg"
-                                        alt="hôyel du port"
+                                        alt="hôtel du port"
                                     />
                                     <div
                                         class="hebergements__main__card-content"
@@ -395,54 +403,58 @@
                 </div>
 
                 <div class="activities-container">
-                    <a href="#">
-                        <article class="activities-container__activity">
-                            <div>
-                                <img
-                                    src="./images/activites/reno-laithienne.jpg"
-                                    alt="Vieux port"
-                                />
-                            </div>
-                            <h4>Vieux port</h4>
-                        </article>
-                    </a>
-                    <a href="#">
-                        <article class="activities-container__activity">
-                            <div>
-                                <img
-                                    src="./images/activites/paul-hermann.jpg"
-                                    alt="Fort de Pomègues"
-                                />
-                            </div>
-                            <h4>Fort de Pomègues</h4>
-                        </article>
-                    </a>
-                    <a href="#">
-                        <article class="activities-container__activity">
-                            <div>
-                                <img
-                                    src="./images/activites/kilyan-sockalingum.jpg"
-                                    alt="Parc national des Calanques"
-                                />
-                            </div>
-                            <h4>Parc national des Calanques</h4>
-                        </article>
-                    </a>
-                    <a href="#">
-                        <article class="activities-container__activity">
-                            <div>
-                                <img
-                                    src="./images/activites/florian-wehde.jpg"
-                                    alt="Notre-Dame-de-la-Garde"
-                                />
-                            </div>
-                            <h4>Notre-Dame-de-la-Garde</h4>
-                        </article>
-                    </a>
+                    <h2>Activités à Marseille</h2>
+
+                    <div class="activities-container__card-container">
+                        <a href="#">
+                            <article class="activities-container__activity">
+                                <div>
+                                    <img
+                                        src="./images/activites/reno-laithienne.jpg"
+                                        alt="Vieux port"
+                                    />
+                                </div>
+                                <h4>Vieux port</h4>
+                            </article>
+                        </a>
+                        <a href="#">
+                            <article class="activities-container__activity">
+                                <div>
+                                    <img
+                                        src="./images/activites/paul-hermann.jpg"
+                                        alt="Fort de Pomègues"
+                                    />
+                                </div>
+                                <h4>Fort de Pomègues</h4>
+                            </article>
+                        </a>
+                        <a href="#">
+                            <article class="activities-container__activity">
+                                <div>
+                                    <img
+                                        src="./images/activites/kilyan-sockalingum.jpg"
+                                        alt="Parc national des Calanques"
+                                    />
+                                </div>
+                                <h4>Parc national des Calanques</h4>
+                            </article>
+                        </a>
+                        <a href="#">
+                            <article class="activities-container__activity">
+                                <div>
+                                    <img
+                                        src="./images/activites/florian-wehde.jpg"
+                                        alt="Notre-Dame-de-la-Garde"
+                                    />
+                                </div>
+                                <h4>Notre-Dame-de-la-Garde</h4>
+                            </article>
+                        </a>
+                    </div>
                 </div>
             </main>
 
-            <!--  <footer class="footer">
+            <footer class="footer">
                 <div>
                     <h3>À propos</h3>
                     <a href="#">Fonctionnement du site</a>
@@ -459,7 +471,7 @@
                     <a href="#">Centre d’aide</a>
                     <a href="#">Nous contacter</a>
                 </div>
-            </footer> -->
+            </footer>
         </div>
     </body>
 </html>
