@@ -116,10 +116,10 @@ main {
 
     transform: translateY(0) scale(0);
 
-    transition: transform 0.2s ease;
+    transition: transform 0.1s ease;
 }
 .header > nav > a:hover::after {
-    transform: scale(1) translateY(0);
+    transform: translateY(0) scale(1);
 }
 .header > nav > a:hover {
     color: var(--main-color);
