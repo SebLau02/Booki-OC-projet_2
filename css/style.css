@@ -8,16 +8,13 @@
     --main-bg-color: #f2f2f2;
     --filter-bg-color: #deebff;
     --dark-black-color: #000000;
+    --snow-color: #ffffff;
     --fs-18: 18px;
+    --fw-bold: 700;
 }
 
 .fa-solid {
     color: var(--main-color);
-}
-
-body {
-    display: flex;
-    justify-content: center;
 }
 
 .main-container {
@@ -42,34 +39,33 @@ a {
     font-size: 22px;
 }
 
-.card {
-    background-color: white;
-    border-radius: 20px;
-    padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-}
-
-.card img {
-    object-fit: cover;
-}
-
-.card-title {
-    font-size: 16px;
-}
-
-.euro {
-    font-weight: 700;
-}
-
-.neutral-star {
-    color: var(--main-bg-color);
-}
 main {
     display: flex;
     flex-direction: column;
     gap: 35px;
 }
 
+/* --------------------------------- */
+
+body,
+.header > nav,
+.info-group,
+.filter__grid > button,
+.hebergements,
+.footer {
+    display: flex;
+    justify-content: center;
+}
+.activities-container__activity > div > img,
+.activities-container__activity > div > img,
+.info-group__search-bar > span > i,
+.info-group__search-bar > button > span,
+.info > span > i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 /* --------------------------------- */
 
 .header {
@@ -84,11 +80,9 @@ main {
 
     color: var(--main-color);
 
-    padding: 30px 50px;
+    padding: 30px 50px 30px 0;
 }
 .header > nav {
-    display: flex;
-    justify-content: center;
     align-items: center;
     gap: 68px;
 
@@ -128,8 +122,6 @@ main {
 /* --------------------------------- */
 
 .info-group {
-    display: flex;
-    justify-content: center;
     flex-direction: column;
     gap: 35px;
 }
@@ -172,18 +164,13 @@ main {
 
     /* style pour input value */
 
-    font-weight: 700;
-    font-size: 18px;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-18);
     color: var(--dark-black-color);
 
     text-align: center;
 }
 .info-group__search-bar > span > i {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
     color: var(--dark-black-color);
 }
 .info-group__search-bar > button {
@@ -195,25 +182,18 @@ main {
 
     background-color: var(--main-color);
 
-    color: #f1f1f1;
-    font-weight: 700;
-    font-size: 18px;
+    color: var(--snow-color);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-18);
 
     border: none;
     border-radius: 0 15px 15px 0;
 }
 
-.info-group__search-bar > button > span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .info-group__search-bar > button > :last-child > i {
     display: none;
 
-    color: #ffffff;
+    color: var(--snow-color);
 }
 
 .filter-bar {
@@ -223,7 +203,7 @@ main {
     gap: 15px;
 }
 .filter-bar * {
-    font-weight: 700;
+    font-weight: var(--fw-bold);
 }
 .filter-bar > span {
     font-size: var(--fs-18);
@@ -236,8 +216,6 @@ main {
 .filter__grid > button {
     position: relative;
 
-    display: flex;
-    justify-content: center;
     align-items: center;
 
     gap: 10px;
@@ -304,11 +282,6 @@ que la propriété background.
     border-radius: 50%;
 }
 .info > span > i {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
     font-size: 10px;
 }
 
@@ -329,8 +302,6 @@ que la propriété background.
 /****** Hebergements ***********/
 
 .hebergements {
-    display: flex;
-    justify-content: center;
     flex-direction: column;
     gap: 30px;
 
@@ -338,30 +309,31 @@ que la propriété background.
 }
 .hebergements__main {
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-gap: 30px;
 
     width: 100%;
 }
-.hebergements__main > a {
-    width: 100%;
-}
-.hebergements__main > a > article {
+
+.hebergements__main > article > a {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
 
-    max-height: 207px;
-    height: 100%;
+    height: 207px;
+    width: 100%;
 
     border-radius: 20px;
 
     box-shadow: 0 3px 15px #0000001a;
 
-    background: #ffffff;
+    background: var(--snow-color);
 }
-.hebergements__main > a > article > img {
+.hebergements__main > article {
+    width: 100%;
+}
+.hebergements__main > article > a > img {
     width: 100%;
     max-width: 100%;
 
@@ -370,12 +342,10 @@ que la propriété background.
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 
-    border: 5px solid #ffffff;
+    border: 5px solid var(--snow-color);
     box-sizing: border-box;
 
     object-fit: cover;
-
-    margin: 0;
 }
 .hebergements__main__card-content {
     display: flex;
@@ -386,7 +356,7 @@ que la propriété background.
 
     line-height: 1;
 
-    margin: 4px 15px 15px;
+    margin: 0 0 15px 15px;
 }
 .hebergements__main__card-content > * {
     margin: 0;
@@ -401,8 +371,8 @@ que la propriété background.
     color: #f2f2f2;
 }
 .hebergements__see-more {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: var(--fs-18);
+    font-weight: var(--fw-bold);
 
     border: none;
     background: none;
@@ -420,16 +390,40 @@ que la propriété background.
     align-items: center;
 }
 
-.populaires-cards .card {
+.populaires-cards .card > a {
     display: flex;
+}
+.card {
+    background-color: var(--snow-color);
+
+    border-radius: 20px;
+
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+
     margin-top: 33px;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.euro {
+    font-weight: var(--fw-bold);
+}
+
+.neutral-star {
+    color: var(--main-bg-color);
 }
 
 .populaires-cards img {
     width: 33%;
     height: 136px;
+
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    border: 5px var(--snow-color) solid;
+
+    object-fit: cover;
 }
 
 .populaires-cards .card-content {
@@ -456,7 +450,8 @@ que la propriété background.
     margin-bottom: 5px;
 }
 
-/* --------------------------------- */
+/* ---------------- activité a marseille----------------- */
+
 .activities-container {
     padding: 30px;
 }
@@ -466,7 +461,7 @@ que la propriété background.
     justify-content: center;
     gap: 30px;
 }
-.activities-container__card-container > a {
+.activities-container__card-container > article {
     width: 100%;
     height: 100%;
     max-width: 297px;
@@ -489,11 +484,6 @@ que la propriété background.
     overflow: hidden;
 }
 .activities-container__activity > div > img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -503,17 +493,14 @@ que la propriété background.
     margin: 0;
 }
 
-/* --------------------------------- */
+/* --------------- footer ------------------ */
 
 .footer {
-    display: flex;
-    justify-content: center;
-
     background-color: var(--main-bg-color);
 
     margin-top: 35px;
 }
-.footer > div {
+.footer > section {
     display: flex;
     justify-content: start;
     flex-direction: column;
@@ -524,16 +511,15 @@ que la propriété background.
     padding: 20px;
 }
 
-.footer > div > h3 {
+.footer > section > h3 {
     margin: 0;
 
-    font-size: 18px;
+    font-size: var(--fs-18);
 }
-/* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
+
+@media screen and (max-width: 1024px) {
     .filter-bar {
         flex-direction: column;
         align-items: start;
@@ -564,7 +550,7 @@ que la propriété background.
         justify-content: space-between;
     }
 
-    .populaires-cards a {
+    .populaires-cards article {
         width: 30%;
     }
 
@@ -575,10 +561,17 @@ que la propriété background.
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .activities-container__card-container > article {
+        max-height: 270px;
+    }
+    .activities-container__activity > div {
+        max-height: 200px;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     body {
         margin: 0;
     }
@@ -680,12 +673,11 @@ les titres sont aligné parfaitement comme dans la maquette
         gap: 15px;
 
         max-width: 335px;
-        /*        max-width: 100%;*/
     }
     .populaires {
         margin-top: 0;
     }
-    .populaires-cards a {
+    .populaires-cards > article {
         width: 100%;
         max-width: 335px;
     }
@@ -704,8 +696,8 @@ les titres sont aligné parfaitement comme dans la maquette
         flex-direction: column;
         gap: 15px;
     }
-    .activities-container__card-container > a {
-        width: 315px;
+    .activities-container__card-container > article {
+        max-width: 315px;
         height: 200px;
     }
     .activities-container__activity > div {
